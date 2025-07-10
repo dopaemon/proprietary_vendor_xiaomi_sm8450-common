@@ -229,10 +229,12 @@ PRODUCT_PACKAGES += \
     libVkLayer_ADRENO_qprofiler \
     libq3dtools_adreno \
     libq3dtools_esx \
+    libC2D2 \
     libCB \
     libOpenCL \
     libadreno_app_profiles \
     libadreno_utils \
+    libc2d30_bltlib \
     libgpudataproducer \
     libgsl \
     libkcl \
@@ -504,6 +506,7 @@ PRODUCT_PACKAGES += \
     libsnsapi \
     libsnsdiaglog \
     libsoc_helper \
+    libsoc_helper_jni \
     libspcom \
     libspl \
     libssc \
@@ -758,6 +761,7 @@ PRODUCT_PACKAGES += \
     IWlanService \
     SoterService \
     TimeService \
+    TrustZoneAccessService \
     com.qualcomm.qti.gpudrivers.taro.api31 \
     uimgbaservice \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
