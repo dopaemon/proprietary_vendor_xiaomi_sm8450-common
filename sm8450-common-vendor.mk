@@ -245,7 +245,6 @@ PRODUCT_PACKAGES += \
     libC2D2 \
     libCB \
     libOpenCL \
-    libadreno_app_profiles \
     libadreno_utils \
     libc2d30_bltlib \
     libgpudataproducer \
@@ -919,7 +918,26 @@ PRODUCT_PACKAGES += \
     dpmd \
     qccsyshal@1.2-service \
     tcmd \
-    wfdservice64
+    wfdservice64 \
+    android.hardware.opengles.aep.xml \
+    android.hardware.vulkan.version-1_1.xml \
+    android.hardware.vulkan.version-1_3.xml \
+    android.hardware.vulkan.version-1_4.xml \
+    android.software.opengles.deqp.level.xml \
+    android.software.tuning-1.xml \
+    android.software.vulkan.deqp.level.xml \
+    libOpenCL_adreno \
+    libadreno_app_profiles \
+    vendor.qti.hardware.display.mapper@1.0 \
+    vendor.qti.hardware.display.mapper@1.1 \
+    vendor.qti.hardware.display.mapper@2.0 \
+    vendor.qti.hardware.display.mapper@3.0 \
+    vendor.qti.hardware.display.mapper@4.0 \
+    vendor.qti.hardware.display.mapperextensions@1.0 \
+    vendor.qti.hardware.display.mapperextensions@1.1 \
+    vendor.qti.hardware.display.mapperextensions@1.2 \
+    vendor.qti.hardware.display.mapperextensions@1.3
+
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
