@@ -919,13 +919,9 @@ PRODUCT_PACKAGES += \
     qccsyshal@1.2-service \
     tcmd \
     wfdservice64 \
-    android.hardware.opengles.aep.xml \
-    android.hardware.vulkan.version-1_1.xml \
     android.hardware.vulkan.version-1_3.xml \
     android.hardware.vulkan.version-1_4.xml \
-    android.software.opengles.deqp.level.xml \
     android.software.tuning-1.xml \
-    android.software.vulkan.deqp.level.xml \
     libOpenCL_adreno \
     libadreno_app_profiles \
     vendor.qti.hardware.display.mapper@1.0 \

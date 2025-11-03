@@ -443,6 +443,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libadreno_utils",
             ],
         },
         android_arm64: {
@@ -469,6 +470,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libadreno_utils",
             ],
         },
     },
@@ -495,6 +497,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
             ],
         },
         android_arm64: {
@@ -508,6 +511,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
             ],
         },
     },
@@ -533,6 +537,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libnativewindow",
             ],
         },
         android_arm64: {
@@ -545,12 +550,14 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libnativewindow",
             ],
         },
     },
     compile_multilib: "both",
     prefer: true,
     soc_specific: true,
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -16292,6 +16299,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
+    allow_undefined_symbols: true,
 }
 
 cc_prebuilt_library_shared {
@@ -20281,20 +20289,6 @@ install_symlink {
 
 // ===== ARQUIVOS DE PERMISSÕES/CONFIGURAÇÃO =====
 prebuilt_etc {
-    name: "android.hardware.opengles.aep.xml",
-    src: "proprietary/vendor/etc/permissions/android.hardware.opengles.aep.xml",
-    sub_dir: "permissions",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "android.hardware.vulkan.version-1_1.xml",
-    src: "proprietary/vendor/etc/permissions/android.hardware.vulkan.version-1_1.xml",
-    sub_dir: "permissions",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "android.hardware.vulkan.version-1_3.xml",
     src: "proprietary/vendor/etc/permissions/android.hardware.vulkan.version-1_3.xml",
     sub_dir: "permissions",
@@ -20309,25 +20303,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "android.software.opengles.deqp.level.xml",
-    src: "proprietary/vendor/etc/permissions/android.software.opengles.deqp.level.xml",
-    sub_dir: "permissions",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "android.software.tuning-1.xml",
     src: "proprietary/vendor/etc/permissions/android.software.tuning-1.xml",
     sub_dir: "permissions",
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "android.software.vulkan.deqp.level.xml",
-    src: "proprietary/vendor/etc/permissions/android.software.vulkan.deqp.level.xml",
-    sub_dir: "permissions",
-    vendor: true,
-}
 
 // ===== BIBLIOTECAS ADRENO PRINCIPAIS =====
 cc_prebuilt_library_shared {
@@ -20359,39 +20340,60 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libadreno_app_profiles",
     owner: "xiaomi",
-    strip: { none: true },
+    strip: {
+        none: true,
+    },
     target: {
-        android_arm: { 
-            srcs: ["proprietary/vendor/lib/libadreno_app_profiles.so"],
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libadreno_app_profiles.so",
+            ],
             shared_libs: [
-              "libcutils",
-              "libhardware",
-              "libutils",
-              "libhidlbase",
-              "libhidlmemory",
-              "android.hidl.memory@1.0",
-              "vendor.qti.qspmhal@1.0",
-              "libz",
-              "liblog",
-          ],
+                "libcutils",
+                "libhardware",
+                "libutils",
+                "libhidlbase",
+                "libhidlmemory",
+                "android.hidl.memory@1.0",
+                "vendor.qti.qspmhal@1.0",
+                "libdl",
+                "libz",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libbase",
+                "libbinder_ndk",
+            ],
+            exclude_shared_libs: ["vendor.qti.diaghal-V1-ndk"],
         },
-        android_arm64: { 
-            srcs: ["proprietary/vendor/lib64/libadreno_app_profiles.so"],
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libadreno_app_profiles.so",
+            ],
             shared_libs: [
-              "libcutils",
-              "libhardware",
-              "libutils",
-              "libhidlbase",
-              "libhidlmemory",
-              "android.hidl.memory@1.0",
-              "libz",
-              "liblog",
-          ],
-          exclude_shared_libs: ["vendor.qti.qspmhal@1.0"],
+                "libcutils",
+                "libhardware",
+                "libutils",
+                "libhidlbase",
+                "libhidlmemory",
+                "android.hidl.memory@1.0",
+                "vendor.qti.qspmhal@1.0",
+                "libdl",
+                "libz",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libbase",
+                "libbinder_ndk",
+                "vendor.qti.diaghal-V1-ndk"
+            ]
         },
     },
     compile_multilib: "both",
-    vendor: true,
+    prefer: true,
+    soc_specific: true,
     check_elf_files: false,
 }
 
