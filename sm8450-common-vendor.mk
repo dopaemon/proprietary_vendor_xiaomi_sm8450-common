@@ -287,6 +287,7 @@ PRODUCT_PACKAGES += \
     libQcelp13SwCodec \
     libQtiRilLoadable \
     libadm \
+    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
