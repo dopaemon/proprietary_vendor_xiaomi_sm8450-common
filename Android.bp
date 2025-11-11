@@ -1659,56 +1659,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libAlacSwDec",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libAlacSwDec.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libApeSwDec",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libApeSwDec.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libCB",
     owner: "xiaomi",
     strip: {
@@ -2189,59 +2139,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libadreno_app_profiles",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libadreno_app_profiles.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libhardware",
-                "libutils",
-                "libhidlbase",
-                "libhidlmemory",
-                "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadreno_app_profiles.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libhardware",
-                "libutils",
-                "libhidlbase",
-                "libhidlmemory",
-                "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-            ],
-        },
-    },
-    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
@@ -19661,66 +19558,6 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     vendor: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libadreno_app_profiles",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libadreno_app_profiles.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libhardware",
-                "libutils",
-                "libhidlbase",
-                "libhidlmemory",
-                "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libbase",
-                "libbinder_ndk",
-            ],
-            exclude_shared_libs: ["vendor.qti.diaghal-V1-ndk"],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadreno_app_profiles.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libhardware",
-                "libutils",
-                "libhidlbase",
-                "libhidlmemory",
-                "android.hidl.memory@1.0",
-                "vendor.qti.qspmhal@1.0",
-                "libdl",
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libbase",
-                "libbinder_ndk",
-                "vendor.qti.diaghal-V1-ndk"
-            ]
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-    check_elf_files: false,
 }
 
 // ===== DISPLAY MAPPERS - VERSÕES 1.x =====
