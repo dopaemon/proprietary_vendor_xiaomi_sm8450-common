@@ -37,6 +37,10 @@
     <EccEntry Ecc="102" Category="1" Condition="2" Plmn="250 02"/>
     <EccEntry Ecc="103" Category="2" Condition="2" Plmn="250 02"/>
     <EccEntry Ecc="104" Category="0" Condition="2" Plmn="250 02"/>
+    <EccEntry Ecc="101" Category="4" Condition="2" Plmn="250 11"/>
+    <EccEntry Ecc="102" Category="1" Condition="2" Plmn="250 11"/>
+    <EccEntry Ecc="103" Category="2" Condition="2" Plmn="250 11"/>
+    <EccEntry Ecc="104" Category="0" Condition="2" Plmn="250 11"/>
 
     <!-- BUGM11AUPV-1224 -->
     <EccEntry Ecc="101" Category="4" Condition="2" Plmn="250 20"/>
@@ -487,10 +491,10 @@
     <EccEntry Ecc="198" Category="0" Condition="2" Plmn = "605 FFF" />
 
     <!--add Egypt xiaomi -->
-    <EccEntry Ecc="122" Category="0" Condition="1" Plmn = "602 FFF" />	
-    <EccEntry Ecc="123" Category="0" Condition="2" Plmn = "602 FFF" />	
-    <EccEntry Ecc="180" Category="0" Condition="2" Plmn = "602 FFF" />	
-    <EccEntry Ecc="126" Category="0" Condition="2" Plmn = "602 FFF" />	
+    <EccEntry Ecc="122" Category="1" Condition="1" Plmn = "602 FFF" />
+    <EccEntry Ecc="123" Category="2" Condition="2" Plmn = "602 FFF" />
+    <EccEntry Ecc="180" Category="4" Condition="2" Plmn = "602 FFF" />
+    <EccEntry Ecc="126" Category="0" Condition="5" Plmn = "602 FFF" />
     <!--add Egypt xiaomi -->
 
     <!--add Salvador xiaomi -->
@@ -576,6 +580,9 @@
     <EccEntry Ecc="101" Category="0" Condition="2" Plmn = "255 06" />
     <EccEntry Ecc="102" Category="0" Condition="2" Plmn = "255 06" />
     <EccEntry Ecc="103" Category="0" Condition="2" Plmn = "255 06" />
+    <EccEntry Ecc="101" Category="0" Condition="2" Plmn="255 01"/>
+    <EccEntry Ecc="102" Category="0" Condition="2" Plmn="255 01"/>
+    <EccEntry Ecc="103" Category="0" Condition="2" Plmn="255 01"/>
     <!--add ukraine xiaomi -->
 
     <!--add YL xiaomi -->
@@ -615,7 +622,7 @@
     <EccEntry Ecc="996" Category="0" Condition="2" Plmn = "426 FFF" />	
     <EccEntry Ecc="997" Category="0" Condition="2" Plmn = "426 FFF" />
     <EccEntry Ecc="998" Category="0" Condition="2" Plmn = "426 FFF" />	
-    <EccEntry Ecc="999" Category="0" Condition="2" Plmn = "426 FFF" />	
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "426 FFF" />
     <!--add Bahrain xiaomi -->
 
     <!--add Honduras xiaomi -->
